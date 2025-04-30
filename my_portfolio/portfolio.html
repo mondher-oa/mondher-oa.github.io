@@ -613,9 +613,9 @@
                         <button class="nav-button bg-transparent hover:bg-accent text-accent hover:text-primary border border-accent py-3 px-6 rounded transition duration-300 code-font" data-target="expertise">
                             Découvrir mon expertise <i class="fas fa-arrow-right ml-2"></i>
                         </button>
-                        <a href="https://tpffitwr.genspark.space/" target="_blank" id="downloadCV" class="download-btn pulse-download bg-accent hover:bg-opacity-80 text-primary border border-accent py-3 px-6 rounded transition duration-300 code-font inline-flex items-center">
+                        <button id="downloadCV" class="download-btn pulse-download bg-accent hover:bg-opacity-80 text-primary border border-accent py-3 px-6 rounded transition duration-300 code-font">
                             <i class="fas fa-file-download mr-2"></i> Télécharger mon CV
-                        </a>
+                        </button>
                         <button class="nav-button bg-transparent hover:bg-accent text-accent hover:text-primary border border-accent py-3 px-6 rounded transition duration-300 code-font" data-target="contact">
                             Me contacter <i class="fas fa-paper-plane ml-2"></i>
                         </button>
@@ -625,7 +625,7 @@
                 <div class="security-pulse">
                     <!-- Photo de profil avec overlay cybersécurité -->
                     <div class="profile-photo-container">
-                        <img src="https://page.genspark.site/v1/base64_upload/bee5cb3357599a79dd4354edeb8c8e41" alt="Mondher Ouled Ahmed" class="profile-photo">
+                        <img src="https://page.genspark.site/v1/base64_upload/31150749cd83016ad41393981560d8ae" alt="Mondher Ouled Ahmed" class="profile-photo">
                         <div class="photo-overlay"></div>
                         <div class="photo-frame-top"></div>
                         <div class="photo-frame-right"></div>
@@ -1568,11 +1568,7 @@
                             
                             <div class="my-3 flex items-center">
                                 <i class="fas fa-envelope text-accent mr-3"></i>
-                                <span>email: <a href="/cdn-cgi/l/email-protection#42212d2c36232136022f2d2c262a27306f2d372e27266f232a2f27266c212d2f"><span class="__cf_email__" data-cfemail="1a7975746e7b796e5a7775747e727f6837756f767f7e377b72777f7e34797577">[email&#160;protected]</span></a></span>
-                            </div>
-                            <div class="my-3 flex items-center">
-                                <i class="fas fa-phone text-accent mr-3"></i>
-                                <span>tel: +21654059246</span>
+                                <span>email: <a href="/cdn-cgi/l/email-protection#91f2feffe5f0f2e5d1fcfefff5f9f4e3bcfee4fdf4f5bcf0f9fcf4f5bff2fefc"><span class="__cf_email__" data-cfemail="51323e3f25303225113c3e3f353934237c3e243d34357c30393c34357f323e3c">[email&#160;protected]</span></a></span>
                             </div>
                             <div class="my-3 flex items-center">
                                 <i class="fab fa-linkedin text-accent mr-3"></i>
@@ -1609,9 +1605,9 @@
 
                     <!-- CV Download Button in Contact Section -->
                     <div class="mt-8 mb-8">
-                        <a href="https://tpffitwr.genspark.space/" target="_blank" id="downloadCV2" class="download-btn w-full bg-transparent hover:bg-accent text-accent hover:text-primary border border-accent py-4 px-6 rounded transition duration-300 code-font flex items-center justify-center">
+                        <button id="downloadCV2" class="download-btn w-full bg-transparent hover:bg-accent text-accent hover:text-primary border border-accent py-4 px-6 rounded transition duration-300 code-font flex items-center justify-center">
                             <i class="fas fa-file-download mr-2"></i> Télécharger mon CV complet
-                        </a>
+                        </button>
                     </div>
                 </div>
                 
@@ -1697,6 +1693,7 @@
             const navButtons = document.querySelectorAll('.nav-button');
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const mobileMenu = document.getElementById('mobileMenu');
+            const downloadBtns = document.querySelectorAll('#downloadCV, #downloadCV2');
             
             // Mobile menu toggle
             mobileMenuBtn.addEventListener('click', function() {
@@ -1741,6 +1738,14 @@
                 button.addEventListener('click', function() {
                     const targetId = this.getAttribute('data-target');
                     navigateTo(targetId);
+                });
+            });
+
+            // CV Download Button functionality
+            downloadBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Rediriger vers le CV mis à jour
+                    window.open('https://rssihxmq.genspark.space/', '_blank');
                 });
             });
             
