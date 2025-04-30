@@ -1741,23 +1741,23 @@ cv<!DOCTYPE html>
                 });
             });
 
-            // CV Download Button functionality
-            downloadBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // Rediriger vers le CV mis à jour
-                    window.open('https://mondher-oa.github.io/my_portfolio/cv_resume_updated_mondher.pdf
-/', '_blank');
-                });
-            });
-            
-            // PDF Export Function for Print Version
-            if (window.location.search.includes('print=true')) {
-                document.querySelectorAll('.section-container').forEach(section => {
-                    section.style.display = 'block';
-                    section.style.opacity = '1';
-                });
-                document.querySelector('nav').style.display = 'none';
-            }
+          // CV Download Button functionality
+downloadBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+        // Rediriger vers le CV mis à jour
+        window.open('https://mondher-oa.github.io/my_portfolio/cv_resume_updated_mondher.pdf', '_blank');
+    });
+});
+
+// PDF Export Function for Print Version
+if (window.location.search.includes('print=true')) {
+    document.querySelectorAll('.section-container').forEach(section => {
+        section.style.display = 'block';
+        section.style.opacity = '1';
+    });
+    document.querySelector('nav').style.display = 'none';
+}
+
             
             // Radar Chart for Skills
             const ctx = document.getElementById('radarChart').getContext('2d');
